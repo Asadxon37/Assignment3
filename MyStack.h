@@ -12,9 +12,11 @@ private:
     private:
         T value;
         MyListNode *next;
+
         public:
         MyListNode(T value):value(value),next(nullptr){}
         T getValue()const {return value;}
+        void setNext(MyListNode* nextNode) { next = nextNode; }
         MyListNode *getNext()const {return next;}
 
     };
@@ -26,6 +28,7 @@ private:
             pop();
         }
     }
+    bool empty() const { return head == nullptr; }
     T top()const {
         if (empty()) {
             throw std::logic_error("Stack is empty\n");

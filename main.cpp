@@ -4,23 +4,23 @@
 using namespace std;
 
 int main() {
-    MyStack<int> myStack;
+    MyStack<int> stack;
 
-    myStack.push(10);
-    myStack.push(20);
-    myStack.push(30);
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
 
-    cout<<"Top element: "<<myStack.top()<<endl;
+    cout<<"Top element: "<<stack.top()<<endl;
 
-    myStack.pop();
+    stack.pop();
 
-    cout<<"Top element after pop: "<<myStack.top()<<endl;
+    cout<<"Top element after pop: "<<stack.top()<<endl;
 
-    myStack.pop();
-    myStack.pop();
+    stack.pop();
+    stack.pop();
 
     try {
-        myStack.pop();
+        stack.pop();
     }catch (const std::logic_error &e){
         cout<<"Exception caught: "<<e.what();
     }
