@@ -10,19 +10,20 @@ int main() {
     stack.push(20);
     stack.push(30);
 
-    cout<<"Top element: "<<stack.top()<<endl;
+    cout << "Top element: " << stack.top() << endl; // 30
 
     stack.pop();
 
-    cout<<"Top element after pop: "<<stack.top()<<endl;
+    cout << "Top element after pop: " << stack.top() << endl; // 20
 
     stack.pop();
     stack.pop();
 
     try {
         stack.pop();
-    }catch (const std::logic_error &e){
-        cout<<"Exception caught: "<<e.what();
+    } catch (const std::logic_error &e) {
+        cout << "Exception caught: " << e.what();
     }
+
     return 0;
 }
